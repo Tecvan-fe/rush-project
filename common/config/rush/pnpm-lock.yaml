@@ -8,13 +8,24 @@ importers:
   ../../apps/bar:
     specifiers:
       typescript: ~4.9.3
-    dependencies:
+    devDependencies:
       typescript: 4.9.3
 
   ../../apps/foo:
     specifiers:
+      '@rush-project/bar': workspace:*
+      '@rush-project/submodule': workspace:*
       typescript: ~4.9.3
     dependencies:
+      '@rush-project/bar': link:../bar
+      '@rush-project/submodule': link:../../rush-submodule
+    devDependencies:
+      typescript: 4.9.3
+
+  ../../rush-submodule:
+    specifiers:
+      typescript: ^4.9.3
+    devDependencies:
       typescript: 4.9.3
 
 packages:
@@ -23,4 +34,4 @@ packages:
     resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: false
+    dev: true

@@ -1,5 +1,5 @@
 [submodule "rush-submodule"]
 	path = rush-submodule
-	url = git@github.com:Tecvan-fe/rush-project.git
+	url = git@github.com:Tecvan-fe/rush-submodule.git
 	branch = master
 	shallow = true
