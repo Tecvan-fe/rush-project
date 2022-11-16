@@ -1,0 +1,19 @@
+{
+  "name": "@rush-project/foo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "~4.9.3"
+  },
+  "dependencies": {
+    "@rush-project/submodule": "workspace:*",
+    "@rush-project/bar": "workspace:*"
+  }
+}
